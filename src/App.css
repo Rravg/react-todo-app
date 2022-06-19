@@ -1,3 +1,82 @@
 .App {
   background-color: antiquewhite;
 }
+
+.theme-light {
+  --background-image-mobile: url("../public/images/bg-mobile-light.jpg");
+  --background-image-desktop: url("../public/images/bg-desktop-light.jpg");
+  --background-color: hsl(240, 11%, 96%);
+}
+
+.theme-dark {
+  --background-image-mobile: url("../public/images/bg-mobile-dark.jpg");
+  --background-image-desktop: url("../public/images/bg-desktop-dark.jpg");
+  --background-color: hsl(240, 20%, 12%);
+}
+
+.sup {
+  height: 30%;
+  background-image: var(--background-image-mobile);
+  background-size: cover;
+}
+
+.inf {
+  height: 70%;
+  background-color: var(--background-color);
+}
+
+.container {
+  width: 90%;
+  height: 80%;
+  border: 3px solid magenta;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid salmon;
+}
+
+.attribution {
+  color: white;
+}
+
+
+/* Meduium Screen from 376px to 1439px */
+@media screen and (min-width: 376px) and (max-width: 1439px) {
+
+  .sup {
+    background-image: var(--background-image-desktop);
+  }
+
+}
+
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+
+  .sup {
+    height: 40%;
+    background-image: var(--background-image-desktop);
+    background-size: cover;
+  }
+
+  .inf {
+    height: 60%;
+    background-color: var(--background-color);
+  }
+
+  .container {
+    width: 40%;
+    height: 80%;
+    border: 3px solid magenta;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+  }
+
+}
