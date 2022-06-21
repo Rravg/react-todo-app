@@ -6,12 +6,16 @@
   --background-image-mobile: url("../public/images/bg-mobile-light.jpg");
   --background-image-desktop: url("../public/images/bg-desktop-light.jpg");
   --background-color: hsl(240, 11%, 96%);
+  --primary-background-color: hsl(0, 0%, 100%);
+  --caret-color: hsl(224, 26%, 52%);
 }
 
 .theme-dark {
   --background-image-mobile: url("../public/images/bg-mobile-dark.jpg");
   --background-image-desktop: url("../public/images/bg-desktop-dark.jpg");
   --background-color: hsl(240, 20%, 12%);
+  --primary-background-color: hsl(237, 22%, 19%);
+  --caret-color: hsl(225, 32%, 54%);
 }
 
 .sup {
@@ -26,25 +30,80 @@
 }
 
 .container {
+  /* border: 2px solid magenta; */
   width: 90%;
   height: 80%;
-  border: 3px solid magenta;
   position: absolute;
   left: 5%;
   top: 5%;
 }
 
 .header {
+  /* border: 2px solid salmon; */
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  color: white;
+  letter-spacing: 1rem;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.header input {
+  height: 1.5rem;
+}
+
+.input-container {
+  /* border: 2px solid greenyellow; */
+  display: flex;
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  outline: none;
+  padding: 1rem 1rem 1rem 0rem;
+  height: 4rem;
+  font-family: inherit;
+  background-color: var(--primary-background-color);
+  border: none;
+  border-radius: 0px 7px 7px 0px;
+  color: white;
+  caret-color: var(--caret-color);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  border: 3px solid salmon;
+  width: 3rem;
+  background-color: var(--primary-background-color);
+  border-radius: 7px 0px 0px 7px;
+}
+
+.outer-dot {
+  height: 18px;
+  width: 18px;
+  background-color: grey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-dot {
+  height: 16px;
+  width: 16px;
+  background-color: var(--primary-background-color);
+  border-radius: 50%;
 }
 
 .attribution {
   color: white;
 }
-
 
 /* Meduium Screen from 376px to 1439px */
 @media screen and (min-width: 376px) and (max-width: 1439px) {
@@ -54,7 +113,6 @@
   }
 
 }
-
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
@@ -70,10 +128,18 @@
     background-color: var(--background-color);
   }
 
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header input {
+    height: 2rem;
+  }
+
   .container {
+    /* border: 3px solid magenta; */
     width: 40%;
     height: 80%;
-    border: 3px solid magenta;
     position: absolute;
     left: 30%;
     top: 10%;
