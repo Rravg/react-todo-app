@@ -1,0 +1,38 @@
+.todo-container {
+    display: flex;
+}
+
+.todo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    background-color: var(--primary-background-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.outer-dot {
+    height: 18px;
+    width: 18px;
+    background-color: grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-dot {
+    height: 16px;
+    width: 16px;
+    background-color: var(--primary-background-color);
+    border-radius: 50%;
+}
+
+.todo {
+    width: 100%;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    height: 4rem;
+    line-height: 4rem;
+    border-bottom: 2px solid var(--border-color);
+}

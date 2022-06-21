@@ -1,0 +1,45 @@
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    background-color: var(--primary-background-color);
+    border-radius: 7px 0px 0px 7px;
+}
+
+.outer-dot {
+    height: 18px;
+    width: 18px;
+    background-color: grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-dot {
+    height: 16px;
+    width: 16px;
+    background-color: var(--primary-background-color);
+    border-radius: 50%;
+}
+
+.input-field {
+    width: 100%;
+    outline: none;
+    padding: 1rem 1rem 1rem 0rem;
+    height: 4rem;
+    font-family: inherit;
+    background-color: var(--primary-background-color);
+    border: none;
+    border-radius: 0px 7px 7px 0px;
+    color: var(--primary-text-color);
+    caret-color: var(--caret-color);
+    font-size: 1.2rem;
+}

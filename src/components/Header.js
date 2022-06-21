@@ -1,3 +1,4 @@
+import './styles/Header.css';
 import { useState } from 'react';
 import iconSun from '../icons/icon-sun.svg';
 import iconMoon from '../icons/icon-moon.svg';

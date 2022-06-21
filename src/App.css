@@ -1,12 +1,10 @@
-.App {
-  background-color: antiquewhite;
-}
-
 .theme-light {
   --background-image-mobile: url("../public/images/bg-mobile-light.jpg");
   --background-image-desktop: url("../public/images/bg-desktop-light.jpg");
   --background-color: hsl(240, 11%, 96%);
   --primary-background-color: hsl(0, 0%, 100%);
+  --primary-text-color: hsl(252, 8%, 25%);
+  --border-color: hsl(252, 11%, 91%);
   --caret-color: hsl(224, 26%, 52%);
 }
 
@@ -15,6 +13,8 @@
   --background-image-desktop: url("../public/images/bg-desktop-dark.jpg");
   --background-color: hsl(240, 20%, 12%);
   --primary-background-color: hsl(237, 22%, 19%);
+  --primary-text-color: hsl(238, 31%, 84%);
+  --border-color: hsl(237, 16%, 26%);
   --caret-color: hsl(225, 32%, 54%);
 }
 
@@ -30,7 +30,6 @@
 }
 
 .container {
-  /* border: 2px solid magenta; */
   width: 90%;
   height: 80%;
   position: absolute;
@@ -38,68 +37,6 @@
   top: 5%;
 }
 
-.header {
-  /* border: 2px solid salmon; */
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  color: white;
-  letter-spacing: 1rem;
-}
-
-.header h1 {
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-.header input {
-  height: 1.5rem;
-}
-
-.input-container {
-  /* border: 2px solid greenyellow; */
-  display: flex;
-  width: 100%;
-}
-
-.input-field {
-  width: 100%;
-  outline: none;
-  padding: 1rem 1rem 1rem 0rem;
-  height: 4rem;
-  font-family: inherit;
-  background-color: var(--primary-background-color);
-  border: none;
-  border-radius: 0px 7px 7px 0px;
-  color: white;
-  caret-color: var(--caret-color);
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  background-color: var(--primary-background-color);
-  border-radius: 7px 0px 0px 7px;
-}
-
-.outer-dot {
-  height: 18px;
-  width: 18px;
-  background-color: grey;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.inner-dot {
-  height: 16px;
-  width: 16px;
-  background-color: var(--primary-background-color);
-  border-radius: 50%;
-}
 
 .attribution {
   color: white;
@@ -128,16 +65,7 @@
     background-color: var(--background-color);
   }
 
-  .header h1 {
-    font-size: 2.5rem;
-  }
-
-  .header input {
-    height: 2rem;
-  }
-
   .container {
-    /* border: 3px solid magenta; */
     width: 40%;
     height: 80%;
     position: absolute;
