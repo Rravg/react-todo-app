@@ -37,6 +37,9 @@
   height: 70%;
   background-color: var(--background-color);
   min-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .container {
@@ -51,6 +54,7 @@
 
 .attribution {
   color: white;
+  padding-bottom: 2rem;
 }
 
 /* Meduium Screen from 376px to 1439px */
