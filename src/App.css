@@ -53,7 +53,7 @@
 
 
 .attribution {
-  color: white;
+  color: var(--primary-text-color);
   padding-bottom: 2rem;
 }
 
