@@ -15,3 +15,7 @@
     padding: 0rem 1rem;
     border-radius: 0px 0px 7px 7px;
 }
+
+.clear-button {
+    cursor: pointer;
+}

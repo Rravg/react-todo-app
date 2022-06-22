@@ -1,5 +1,33 @@
+.todo {
+    width: 100%;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    height: 4rem;
+    line-height: 4rem;
+    border-bottom: 2px solid var(--border-color);
+    border-radius: 7px 7px 0px 0px;
+    cursor: pointer;
+}
+
+.todo:hover .outer-dot {
+    background: linear-gradient(135deg, hsl(192, 100%, 67%) 40%, hsl(280, 87%, 65%));
+}
+
 .todo-container {
     display: flex;
+    width: 100%;
+}
+
+ul li:first-child .todo-icon {
+    border-radius: 7px 0px 0px 0px;
+}
+
+ul li:first-child .cross-icon {
+    border-radius: 0px 7px 0px 0px;
+}
+
+.checked {
+    text-decoration: line-through;
 }
 
 .todo-icon {
@@ -11,28 +39,11 @@
     border-bottom: 2px solid var(--border-color);
 }
 
-.outer-dot {
-    height: 18px;
-    width: 18px;
-    background-color: grey;
-    border-radius: 50%;
+.cross-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.inner-dot {
-    height: 16px;
-    width: 16px;
+    width: 3rem;
     background-color: var(--primary-background-color);
-    border-radius: 50%;
-}
-
-.todo {
-    width: 100%;
-    background-color: var(--primary-background-color);
-    color: var(--primary-text-color);
-    height: 4rem;
-    line-height: 4rem;
     border-bottom: 2px solid var(--border-color);
 }

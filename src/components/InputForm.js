@@ -15,6 +15,7 @@ export function InputForm(props) {
         } else {
             props.addNewTodo(itemToAdd);
         }
+        props.setUserInput({ todoText: '' });
     }
 
     return (

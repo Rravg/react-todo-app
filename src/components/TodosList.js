@@ -3,15 +3,32 @@ import { Todo } from "./Todo.js";
 
 export function TodosList(props) {
 
+    const todos = props.todos.map((todo, index) => {
+        return (
+            <Todo
+                todoText={todo.todoText}
+                status={todo.status}
+                setStatus={props.setStatus}
+                removeTodo={props.removeTodo}
+                id={index}
+                key={index}
+            />
+        );
+    });
+
+    const handleClick = () => {
+        const uncompleteTodos = props.allTodos.filter(todo => {
+            return !todo.status
+        })
+        props.setTodos(uncompleteTodos);
+    }
+
     return (
         <ul className="todo-list">
-            <Todo text="primer todo" />
-            <Todo text="segundo todo" />
-            <Todo text="tercer todo" />
-            <Todo text="cuarto todo" />
+            {todos}
             <li className="list-options">
                 <div className="items-left">{props.todos.length} items left</div>
-                <div className="clear-button">Clear Completed</div>
+                <div className="clear-button" onClick={handleClick}>Clear Completed</div>
             </li>
         </ul>
     );
