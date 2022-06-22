@@ -41,7 +41,19 @@ function App() {
   }
 
   function filterList(todos, selectedFilter) {
-    return todos;
+    if (selectedFilter === 'all') {
+      return todos;
+    } else if (selectedFilter === 'active') {
+      const filteredList = todos.filter(todo => {
+        return !todo.status;
+      })
+      return filteredList;
+    } else if (selectedFilter === 'completed') {
+      const filteredList = todos.filter(todo => {
+        return todo.status;
+      })
+      return filteredList;
+    }
   }
 
   return (
@@ -58,8 +70,10 @@ function App() {
         setTodos={setTodos}
         setStatus={setStatus}
         removeTodo={removeTodo}
+        setSelectedFilter={setSelectedFilter}
+        selectedFilter={selectedFilter}
       />
-      <FilterSelect />
+      <FilterSelect setSelectedFilter={setSelectedFilter} selectedFilter={selectedFilter} />
     </>
   );
 }

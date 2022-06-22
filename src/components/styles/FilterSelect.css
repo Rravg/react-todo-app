@@ -10,5 +10,29 @@
 }
 
 .filter {
-    margin: 0 1rem;
+    margin: 0 0.75rem;
+    cursor: pointer;
+    color: var(--text-color-inactive);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.filter:hover {
+    color: var(--text-color-hover);
+}
+
+.active {
+    color: var(--text-color-active);
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+    #filter-mobile {
+        display: none;
+    }
+
+    #filter-desktop {
+        display: inherit;
+        margin: 0;
+    }
 }

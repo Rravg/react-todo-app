@@ -9,13 +9,27 @@
     justify-content: space-between;
     width: 100%;
     background-color: var(--primary-background-color);
-    color: var(--primary-text-color);
+    color: var(--text-color-inactive);
     height: 4rem;
     line-height: 4rem;
     padding: 0rem 1rem;
     border-radius: 0px 0px 7px 7px;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .clear-button {
     cursor: pointer;
+}
+
+.clear-button:hover {
+    color: var(--text-color-hover);
+}
+
+#filter-desktop {
+    display: none;
+}
+
+.active {
+    color: var(--text-color-active);
 }

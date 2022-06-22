@@ -4,8 +4,12 @@
   --background-color: hsl(240, 11%, 96%);
   --primary-background-color: hsl(0, 0%, 100%);
   --primary-text-color: hsl(252, 8%, 25%);
+  --secundary-text-color: hsl(252, 6%, 83%);
   --border-color: hsl(252, 11%, 91%);
   --caret-color: hsl(224, 26%, 52%);
+  --text-color-inactive: hsl(240, 4%, 60%);
+  --text-color-active: hsl(226, 47%, 55%);
+  --text-color-hover: hsl(240, 16%, 30%);
 }
 
 .theme-dark {
@@ -14,19 +18,25 @@
   --background-color: hsl(240, 20%, 12%);
   --primary-background-color: hsl(237, 22%, 19%);
   --primary-text-color: hsl(238, 31%, 84%);
+  --secundary-text-color: hsl(237, 12%, 34%);
   --border-color: hsl(237, 16%, 26%);
   --caret-color: hsl(225, 32%, 54%);
+  --text-color-inactive: hsl(242, 13%, 43%);
+  --text-color-active: hsl(226, 47%, 55%);
+  --text-color-hover: hsl(233, 29%, 88%);
 }
 
 .sup {
   height: 30%;
   background-image: var(--background-image-mobile);
   background-size: cover;
+  min-width: 350px;
 }
 
 .inf {
   height: 70%;
   background-color: var(--background-color);
+  min-width: 350px;
 }
 
 .container {
@@ -35,6 +45,7 @@
   position: absolute;
   left: 5%;
   top: 5%;
+  min-width: 300px;
 }
 
 
@@ -53,6 +64,10 @@
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
+
+  html {
+    font-size: 20px;
+  }
 
   .sup {
     height: 40%;

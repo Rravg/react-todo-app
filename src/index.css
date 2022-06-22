@@ -6,11 +6,11 @@
 
 html {
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 body {
   margin: 0px;
   height: 100vh;
-  font-size: 18px;
   font-family: "Josefin Sans", sans-serif;
 }
