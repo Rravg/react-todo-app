@@ -22,21 +22,43 @@ function App() {
   }
 
   const setStatus = (status, index) => {
-    const updatedTodos =
-      [
-        ...todos.slice(0, index),
-        { ...todos[index], status },
-        ...todos.slice(index + 1)
-      ];
+    let updatedTodos = [];
+    if (selectedFilter === 'all') {
+      updatedTodos =
+        [
+          ...todos.slice(0, index),
+          { ...todos[index], status },
+          ...todos.slice(index + 1)
+        ];
+    }
+    else {
+      const altIndex = todos.indexOf(filteredList[index]);
+      updatedTodos =
+        [
+          ...todos.slice(0, altIndex),
+          { ...todos[altIndex], status },
+          ...todos.slice(altIndex + 1)
+        ];
+    }
     setTodos(updatedTodos);
   }
 
   const removeTodo = (index) => {
-    const updatedTodos =
-      [
-        ...todos.slice(0, index),
-        ...todos.slice(index + 1)
-      ];
+    let updatedTodos = [];
+    if (selectedFilter === 'all') {
+      updatedTodos =
+        [
+          ...todos.slice(0, index),
+          ...todos.slice(index + 1)
+        ];
+    } else {
+      const altIndex = todos.indexOf(filteredList[index]);
+      updatedTodos =
+        [
+          ...todos.slice(0, altIndex),
+          ...todos.slice(altIndex + 1)
+        ];
+    }
     setTodos(updatedTodos);
   }
 
